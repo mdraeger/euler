@@ -18,4 +18,8 @@ class EulerSuite extends FunSuite {
   test("3rd problem: the largest prime factor of 13195 is 29: " ){
     assert (Euler3.euler3(13195) === 29)
   }
+  
+  test("4th problem: largest palindromic number that is a multiple of two two-digit numbers is 9009: " ){
+    assert (Euler4.euler4(2) === 9009)
+  }
 }
