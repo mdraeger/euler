@@ -34,4 +34,8 @@ class EulerSuite extends FunSuite {
   test("7th problem: the 6th prime number is 13: " ){
     assert (Euler7.euler(6) === 13)
   }
+  
+  test("8th problem: the greatest product of five consecutive numbers in 123451111 is 120: " ){
+    assert (Euler8.euler("123451111", 5) === 120)
+  }
 }
