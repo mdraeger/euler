@@ -1,7 +1,7 @@
 package org.draegisoft.euler
 
 object Euler4 {
-  def euler4(digits: Int): Long = {
+  def euler(digits: Int): Long = {
     val upper = math.pow(10, digits).toInt
     val lower = math.pow(10, digits -1).toInt
     for (i <- (lower until upper).reverse)

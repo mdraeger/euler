@@ -1,7 +1,7 @@
 package org.draegisoft.euler
 
 object Euler3 {
-  def euler3(number: Long): Long = {
+  def euler(number: Long): Long = {
     var largest = 1L
     var remainder = number
     for (prime <- primes.takeWhile(_ => remainder != 1)){

@@ -9,5 +9,14 @@ package object euler {
     lazy val result: Stream[Long] = Stream.cons(from, result map (_ + step))
     result
   }
+
+  def lcm(a: Int, b: Int): Int = math.abs(a * b) / gcd(a, b)
+
+  def gcd(a: Int, b: Int): Int = {
+    if (b == 0)
+      a
+    else 
+      gcd(b, a % b)
+  }
 }
 

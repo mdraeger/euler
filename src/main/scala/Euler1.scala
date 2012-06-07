@@ -3,7 +3,7 @@ package org.draegisoft.euler
 import collection.immutable.Seq
 
 object Euler1 {
-  def euler1(roots: Seq[Int], upperBound: Int): Int = {
+  def euler(roots: Seq[Int], upperBound: Int): Int = {
     val numbers = (1 until upperBound).filter(i => {
       (roots filter (i % _ == 0)).size >= 1
     })

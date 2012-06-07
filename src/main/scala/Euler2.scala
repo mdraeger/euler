@@ -3,7 +3,7 @@ package org.draegisoft.euler
 import collection.immutable.Seq
 
 object Euler2 {
-  def euler2(upperBound: Int): Int = {
+  def euler(upperBound: Int): Int = {
     lazy val fibonacci: Stream[Int] = 0 #:: 1 #:: (fibonacci zip fibonacci.tail).map{
       case (a,b) => a+b
     }
