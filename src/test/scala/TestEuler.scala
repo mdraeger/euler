@@ -26,4 +26,8 @@ class EulerSuite extends FunSuite {
   test("5th problem: the smallest number that can be divided by each of the numbers from 1 to ten is 2520: " ){
     assert (Euler5.euler(1, 10) === 2520)
   }
+  
+  test("6th problem: the difference between the sum of squares and the square of the sum of 1 to 10 is 2640: " ){
+    assert (Euler6.euler(1, 10) === 2640)
+  }
 }
