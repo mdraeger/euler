@@ -30,4 +30,8 @@ class EulerSuite extends FunSuite {
   test("6th problem: the difference between the sum of squares and the square of the sum of 1 to 10 is 2640: " ){
     assert (Euler6.euler(1, 10) === 2640)
   }
+  
+  test("7th problem: the 6th prime number is 13: " ){
+    assert (Euler7.euler(6) === 13)
+  }
 }
