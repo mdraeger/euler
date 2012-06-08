@@ -38,4 +38,8 @@ class EulerSuite extends FunSuite {
   test("8th problem: the greatest product of five consecutive numbers in 123451111 is 120: " ){
     assert (Euler8.euler("123451111", 5) === 120)
   }
+  
+  test("9th problem: : the Pythagorean triple with sum 12 (3,4,5) has the product 60: " ){
+    assert (Euler9.euler(12) === 60)
+  }
 }
