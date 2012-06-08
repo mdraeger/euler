@@ -42,4 +42,8 @@ class EulerSuite extends FunSuite {
   test("9th problem: : the Pythagorean triple with sum 12 (3,4,5) has the product 60: " ){
     assert (Euler9.euler(12) === 60)
   }
+  
+  test("10th problem: : the sum of all the primes below 10 is 17: " ){
+    assert (Euler10.euler(10) === 17)
+  }
 }
