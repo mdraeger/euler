@@ -18,5 +18,13 @@ package object euler {
     else 
       gcd(b, a % b)
   }
+
+  def prettyPrint(array: Array[Array[Int]]): Unit = {
+    for (i <- 0 until array.length){
+      for (j <- 0 until array(i).length)
+        print(array(i)(j) + " ")
+      println()
+    }
+  }
 }
 

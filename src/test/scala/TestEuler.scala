@@ -46,4 +46,8 @@ class EulerSuite extends FunSuite {
   test("10th problem: : the sum of all the primes below 10 is 17: " ){
     assert (Euler10.euler(10) === 17)
   }
+  
+  test("11th problem: : the sum of all the primes below 10 is 17: " ){
+    assert (Euler11.euler === 70600674)
+  }
 }
