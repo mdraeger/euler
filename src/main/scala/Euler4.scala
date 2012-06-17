@@ -1,16 +1,17 @@
 package org.draegisoft.euler
 
 object Euler4 {
-  def euler(digits: Int): Long = {
+  def euler(digits: Int): Int = {
     val upper = math.pow(10, digits).toInt
     val lower = math.pow(10, digits -1).toInt
+    var maxPalindrome = 0
     for (i <- (lower until upper).reverse)
       for (j <- (lower until upper).reverse){
-        val candidate = i.toLong * j.toLong
+        val candidate = i * j
         if (isPalindrome(candidate))
-          return candidate
+          maxPalindrome = math.max(maxPalindrome, candidate)
       }
-    1L  
+    maxPalindrome  
   }
 
   def isPalindrome(value: Long) = {

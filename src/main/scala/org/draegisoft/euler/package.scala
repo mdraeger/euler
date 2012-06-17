@@ -10,9 +10,9 @@ package object euler {
     result
   }
 
-  def lcm(a: Int, b: Int): Int = math.abs(a * b) / gcd(a, b)
+  def lcm(a: Long, b: Long): Long = math.abs(a * b).toLong / gcd(a, b)
 
-  def gcd(a: Int, b: Int): Int = {
+  def gcd(a: Long, b: Long): Long = {
     if (b == 0)
       a
     else 
