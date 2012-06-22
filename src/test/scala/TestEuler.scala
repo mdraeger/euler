@@ -47,7 +47,11 @@ class EulerSuite extends FunSuite {
     assert (Euler10.euler(10) === 17)
   }
   
-  test("11th problem: : the sum of all the primes below 10 is 17: " ){
+  test("11th problem: : max product of four adjacent numbers is 70600674: " ){
     assert (Euler11.euler === 70600674)
+  }
+
+  test("12th problem: : smallest triangle number with more than 5 divisors is 28: " ){
+    assert (Euler12.euler(5) === 28)
   }
 }

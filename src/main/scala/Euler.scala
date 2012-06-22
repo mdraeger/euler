@@ -14,4 +14,5 @@ object Euler extends App{
     println ("Solution to 9th problem: " + Euler9.euler(1000))
     println ("Solution to 10th problem: " + Euler10.euler(2000000))
     println ("Solution to 11th problem: " + Euler11.euler)
+    println ("Solution to 12th problem: " + Euler12.euler(500))
 }
