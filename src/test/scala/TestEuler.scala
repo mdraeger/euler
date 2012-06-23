@@ -54,4 +54,12 @@ class EulerSuite extends FunSuite {
   test("12th problem: : smallest triangle number with more than 5 divisors is 28: " ){
     assert (Euler12.euler(5) === 28)
   }
+
+  test("13th problem: add a number block: " ){
+    assert (Euler13.euler("1000000000\n1") === "1000000001")
+  }
+
+  test("14th problem: the Collatz sequence starting at 13 has 10 terms"){
+    assert (Euler14.collatzLength(13) === 10)
+  }
 }
