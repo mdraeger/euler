@@ -62,4 +62,8 @@ class EulerSuite extends FunSuite {
   test("14th problem: the Collatz sequence starting at 13 has 10 terms"){
     assert (Euler14.collatzLength(13) === 10)
   }
+
+  test("15th problem: there are six paths in a 2x2 grid"){
+    assert (Euler15.euler(2,2) === 6)
+  }
 }
