@@ -66,4 +66,8 @@ class EulerSuite extends FunSuite {
   test("15th problem: there are six paths in a 2x2 grid"){
     assert (Euler15.euler(2,2) === 6)
   }
+
+  test("16th problem: sum of digits in 2^15 equals 26"){
+    assert (Euler16.sumDigits(BigInt(2).pow(15)) === 26)
+  }
 }
