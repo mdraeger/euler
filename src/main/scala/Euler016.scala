@@ -1,6 +1,6 @@
 package org.draegisoft.euler
 
-object Euler16 {
+object Euler016 {
   def euler(): Unit = {
     val start = System.currentTimeMillis
     val sum = sumDigits(BigInt(2).pow(1000))

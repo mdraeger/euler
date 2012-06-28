@@ -1,7 +1,14 @@
 package org.draegisoft.euler
 
-object Euler8 {
-  def euler(numAsString: String, consec: Int): Int = {
+object Euler008 {
+  def euler(): Unit ={
+    val start = System.currentTimeMillis
+    val greatestProduct = findGreatestProduct(numString, 5)
+    val time = System.currentTimeMillis - start
+    println("8th problem: %d required %d ms.".format(greatestProduct, time))
+  }
+
+  def findGreatestProduct(numAsString: String, consec: Int): Int = {
     var max = 0
     for(i <- 0 to (numAsString.length - consec))
       max = math.max(max, productOfDigits(numAsString.substring(i, i+consec)))

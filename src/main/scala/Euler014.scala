@@ -1,7 +1,14 @@
 package org.draegisoft.euler
 
-object Euler14 {
-  def euler(upper: Int): Int = {
+object Euler014 {
+  def euler(): Unit ={
+    val start = System.currentTimeMillis
+    val longestSequenceGenerator = calculateLongestSequenceGenerator(1000000)
+    val time = System.currentTimeMillis - start
+    println("14th problem: %d required %d ms.".format(longestSequenceGenerator, time))
+  }
+
+  def calculateLongestSequenceGenerator(upper: Int): Int = {
     var best = 0
     var max = 0
     for (i <- 2 to upper){

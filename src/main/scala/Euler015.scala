@@ -2,8 +2,15 @@ package org.draegisoft.euler
 
 import Array._
 
-object Euler15 {
-  def euler(xDim: Int, yDim: Int): Long = {
+object Euler015 {
+  def euler(): Unit ={
+    val start = System.currentTimeMillis
+    val numberOfPaths = calculateNumberOfPaths(20, 20)
+    val time = System.currentTimeMillis - start
+    println("15th problem: %d required %d ms.".format(numberOfPaths, time))
+  }
+
+  def calculateNumberOfPaths(xDim: Int, yDim: Int): Long = {
     val grid = ofDim[Long](xDim+1, yDim+1)
     grid(xDim)(yDim) = 1L
     for (i <- (0 to xDim).reverse){

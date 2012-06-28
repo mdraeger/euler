@@ -1,7 +1,14 @@
 package org.draegisoft.euler
 
-object Euler4 {
-  def euler(digits: Int): Int = {
+object Euler004 {
+  def euler(): Unit = {
+    val start = System.currentTimeMillis
+    val largest = largestPalindrome(3)
+    val time = System.currentTimeMillis - start
+    println("4th problem: %d and required %d ms".format(largest, time))
+  }
+
+  def largestPalindrome(digits: Int): Int = {
     val upper = math.pow(10, digits).toInt
     val lower = math.pow(10, digits -1).toInt
     var maxPalindrome = 0

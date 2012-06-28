@@ -1,8 +1,16 @@
 package org.draegisoft.euler
 
-object Euler12 {
+object Euler012 {
   val primesToConsider = primes take (100000) toList
-  def euler(upperNumberOfDivisors: Int): Long = {
+
+  def euler(): Unit ={
+    val start = System.currentTimeMillis
+    val triangle = triangleNumberWithMoreThanNDivisors(500)
+    val time = System.currentTimeMillis - start
+    println("12th problem: %d required %d ms.".format(triangle, time))
+  }
+
+  def triangleNumberWithMoreThanNDivisors(upperNumberOfDivisors: Int): Long = {
     var n = 1
     var triangle = 0L
     while (numberOfDivisors(triangle) <= upperNumberOfDivisors){

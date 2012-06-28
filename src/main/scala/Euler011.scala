@@ -2,8 +2,16 @@ package org.draegisoft.euler
 
 import Array._
 
-object Euler11 {
-  def euler(): Long = {
+object Euler011 {
+
+  def euler(): Unit ={
+    val start = System.currentTimeMillis
+    val product = greatestProductOfAdjacentCells
+    val time = System.currentTimeMillis - start
+    println("11th problem: %d required %d ms.".format(product, time))
+  }
+
+  def greatestProductOfAdjacentCells(): Long = {
     val numGrid = fullGridString.split("\n") map (l => l.split(" ") map (Integer.parseInt(_)))
     (0 /: (createAdjacentCellList(numGrid) map (tuple => tuple._1 * tuple._2 * tuple._3 * tuple._4))) (math.max(_,_))
   }

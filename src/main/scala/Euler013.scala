@@ -1,7 +1,14 @@
 package org.draegisoft.euler
 
-object Euler13 {
-  def euler(numberLines: String): String = {
+object Euler013 {
+  def euler(): Unit ={
+    val start = System.currentTimeMillis
+    val first10Digits = addNumbersAndGiveFirst10Digits(numberLines)
+    val time = System.currentTimeMillis - start
+    println("13th problem: %s required %d ms.".format(first10Digits, time))
+  }
+
+  def addNumbersAndGiveFirst10Digits(numberLines: String): String = {
     ((BigInt(0) /: numberLines.split("\n").map(BigInt(_))) (_ + _)).toString.substring(0,10)
   }
 
