@@ -6,7 +6,7 @@ import org.draegisoft.euler._
 
 import org.scalatest.FunSuite
 
-class Euler00Suite extends FunSuite {
+class EulerSuite extends FunSuite {
   test("1st problem: the natural numbers below 10 which are multiples of 3 or 5 add up to 23: " ){
     assert (Euler001.sumOfMultiples(Seq(3,5), 10) === 23)
   }
@@ -69,5 +69,15 @@ class Euler00Suite extends FunSuite {
 
   test("16th problem: sum of digits in 2^15 equals 26"){
     assert (Euler016.sumDigits(BigInt(2).pow(15)) === 26)
+  }
+
+  test("17th problem: numbers are translated into words correctly"){
+    assert(Euler017.numberAsWord(342) === "three hundred and forty-two")
+    assert(Euler017.numberAsWord(115) === "one hundred and fifteen")
+    assert(Euler017.numberAsWord(1000) === "one thousand")
+    assert(Euler017.numberOfCharacters(1 to 5) === 19)
+    assert(Euler017.numberOfCharacters(1 to 1000) === 21124)
+    assert(Euler017.numberOfCharacters(115 to 115) === 20)
+    assert(Euler017.numberOfCharacters(342 to 342) === 23)
   }
 }
