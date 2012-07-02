@@ -80,4 +80,8 @@ class EulerSuite extends FunSuite {
     assert(Euler017.numberOfCharacters(115 to 115) === 20)
     assert(Euler017.numberOfCharacters(342 to 342) === 23)
   }
+
+  test("18th problem: find longest path in a triangular network"){
+    assert(Euler018.getMaxPath(Array(Array(3),Array(7,4),Array(2,4,6),Array(8,5,9,3))) === 23)
+  }
 }
