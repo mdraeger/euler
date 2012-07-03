@@ -21,5 +21,7 @@ object Euler extends App{
   Euler016.euler()
   Euler017.euler()
   Euler018.euler()
+  Euler019.euler()
+  Euler020.euler()
   Euler067.euler()
 }

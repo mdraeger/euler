@@ -84,4 +84,9 @@ class EulerSuite extends FunSuite {
   test("18th problem: find longest path in a triangular network"){
     assert(Euler018.getMaxPath(Array(Array(3),Array(7,4),Array(2,4,6),Array(8,5,9,3))) === 23)
   }
+
+  test("20th problem: find the sum of digits of 100! Test with 10!"){
+    assert(Euler020.factorial(BigInt(10)) === BigInt(3628800))
+    assert(Euler020.sumOfDigits(Euler020.factorial(BigInt(10))) === 27)
+  }
 }
