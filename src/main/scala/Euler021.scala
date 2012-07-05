@@ -14,7 +14,7 @@ object Euler021 {
 
   def isAmicable(a: Int): Boolean = {
     val b = d(a)
-    d(b) == a
+    d(b) == a && b != a
   }
 
   def d(n: Int): Int = {

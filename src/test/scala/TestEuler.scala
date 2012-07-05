@@ -89,4 +89,16 @@ class EulerSuite extends FunSuite {
     assert(Euler020.factorial(BigInt(10)) === BigInt(3628800))
     assert(Euler020.sumOfDigits(Euler020.factorial(BigInt(10))) === 27)
   }
+
+  test("21st problem: find amicable numbers"){
+    assert(Euler021.isAmicable(28) === false)
+    assert(Euler021.isAmicable(220) === true)
+    assert(Euler021.isAmicable(284) === true)
+    assert(Euler021.isAmicable(1184) === true)
+    assert(Euler021.isAmicable(2924) === true)
+    assert(Euler021.isAmicable(5020) === true)
+    assert(Euler021.isAmicable(5564) === true)
+    assert(Euler021.isAmicable(6232) === true)
+    assert(Euler021.isAmicable(6368) === true)
+  }
 }
