@@ -93,12 +93,13 @@ class EulerSuite extends FunSuite {
   test("21st problem: find amicable numbers"){
     assert(Euler021.isAmicable(28) === false)
     assert(Euler021.isAmicable(220) === true)
-    assert(Euler021.isAmicable(284) === true)
     assert(Euler021.isAmicable(1184) === true)
-    assert(Euler021.isAmicable(2924) === true)
     assert(Euler021.isAmicable(5020) === true)
-    assert(Euler021.isAmicable(5564) === true)
     assert(Euler021.isAmicable(6232) === true)
-    assert(Euler021.isAmicable(6368) === true)
+  }
+
+  test("22nd problem: score names"){
+    assert(Euler022.score(938, "COLIN") === 49714)
+    assert(Euler022.sort(Euler022.getNames("names.txt"))(938-1) === "COLIN")
   }
 }
