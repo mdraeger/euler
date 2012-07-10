@@ -18,6 +18,19 @@ package object euler {
     else 
       gcd(b, a % b)
   }
+  
+  def sumOfProperDivisors(n: Int) = {
+    var sum = 1
+    val root = math.sqrt(n).toInt
+    for(i <- 2 to root + 1)
+      if (n % i == 0){
+      sum += i + n/i
+    }
+    if (n == root * root)
+      sum -= root
+
+    sum
+  }
 
   def prettyPrint(array: Array[Array[Int]]): Unit = {
     for (i <- 0 until array.length){

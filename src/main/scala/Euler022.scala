@@ -5,7 +5,7 @@ object Euler022 {
     val start = System.currentTimeMillis
     val sum = sumOfScores(getNames("names.txt"))
     val time = System.currentTimeMillis - start
-    println("22th problem: %d required %d ms.".format(sum, time))
+    println("22nd problem: %d required %d ms.".format(sum, time))
   }
 
   def sumOfScores(names: Array[String]): Long = {
