@@ -102,4 +102,13 @@ class EulerSuite extends FunSuite {
     assert(Euler022.score(938, "COLIN") === 49714)
     assert(Euler022.sort(Euler022.getNames("names.txt"))(938-1) === "COLIN")
   }
+
+  test("23rd problem: find numbers that cannot be written as sum of abundant numbers"){
+    assert(Euler023.isAbundant(12) === true)
+    assert(Euler023.isAbundant(11) === false)
+  }
+
+  test("28th problem: diagonals in the 5x5 spiral add up to 101"){
+    assert(Euler028.sumOfCorners(5) === 101)
+  }
 }

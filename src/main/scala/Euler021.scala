@@ -13,16 +13,7 @@ object Euler021 {
   }
 
   def isAmicable(a: Int): Boolean = {
-    val b = d(a)
-    d(b) == a && b != a
-  }
-
-  def d(n: Int): Int = {
-    var sum = 1
-    for(i <- 2 to (math.sqrt(n).toInt + 1))
-      if (n % i == 0){
-        sum += i + n/i
-      }
-    sum
+    val b = sumOfProperDivisors(a)
+    sumOfProperDivisors(b) == a && b != a
   }
 }
