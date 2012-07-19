@@ -9,7 +9,7 @@ object Euler021 {
   }
 
   def sumOfAmicableNumbersBelow(upperLimit: Int): Int = {
-    (0 /: (1 to upperLimit).filter(n => isAmicable(n))) (_ + _)
+    (2 to upperLimit).filter(n => isAmicable(n)).sum
   }
 
   def isAmicable(a: Int): Boolean = {

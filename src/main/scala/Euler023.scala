@@ -11,17 +11,15 @@ object Euler023 {
   def sumOfNumbersNotSumOfAbundantNumbers(range: Range): Int = {
     val allNumbers = range.toArray
     val abundantNumbers = listOfAbundantNumbers(12 to range.max)
-    val lowerHalf = abundantNumbers.filter(n => n < range.max /2 + 1)
-    for (i <- 0 until lowerHalf.length) {
+    for (i <- 0 until abundantNumbers.length){
       for (j <- 0 until abundantNumbers.length){
         val sum = abundantNumbers(i) + abundantNumbers(j)
-        if (sum < range.max)
+        if (sum < allNumbers.length)
           allNumbers(sum) = 0
       }
-    println(i)
     }
 
-    (0 /: allNumbers) (_ + _)
+    allNumbers.sum
   }
 
 

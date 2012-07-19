@@ -22,7 +22,7 @@ package object euler {
   def sumOfProperDivisors(n: Int) = {
     var sum = 1
     val root = math.sqrt(n).toInt
-    for(i <- 2 to root + 1)
+    for(i <- 2 to root)
       if (n % i == 0){
       sum += i + n/i
     }
