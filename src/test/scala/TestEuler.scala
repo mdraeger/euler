@@ -72,9 +72,11 @@ class EulerSuite extends FunSuite {
   }
 
   test("17th problem: numbers are translated into words correctly"){
+    info("correctly determine the number from written form")
     assert(Euler017.numberAsWord(342) === "three hundred and forty-two")
     assert(Euler017.numberAsWord(115) === "one hundred and fifteen")
     assert(Euler017.numberAsWord(1000) === "one thousand")
+    info("correctly determine the number of characters from a range of words")
     assert(Euler017.numberOfCharacters(1 to 5) === 19)
     assert(Euler017.numberOfCharacters(1 to 1000) === 21124)
     assert(Euler017.numberOfCharacters(115 to 115) === 20)
@@ -86,7 +88,9 @@ class EulerSuite extends FunSuite {
   }
 
   test("20th problem: find the sum of digits of 100! Test with 10!"){
+    info("calculate the factorial correctly")
     assert(Euler020.factorial(BigInt(10)) === BigInt(3628800))
+    info("correctly determine the sum of digits")
     assert(Euler020.sumOfDigits(Euler020.factorial(BigInt(10))) === 27)
   }
 
@@ -99,8 +103,10 @@ class EulerSuite extends FunSuite {
   }
 
   test("22nd problem: score names"){
-    assert(Euler022.score(938, "COLIN") === 49714)
+    info("check whether the names are correctly sorted")
     assert(Euler022.sort(Euler022.getNames("names.txt"))(938-1) === "COLIN")
+    info("get the correct score")
+    assert(Euler022.score(938, "COLIN") === 49714)
   }
 
   test("23rd problem: find numbers that cannot be written as sum of abundant numbers"){
@@ -110,5 +116,14 @@ class EulerSuite extends FunSuite {
 
   test("28th problem: diagonals in the 5x5 spiral add up to 101"){
     assert(Euler028.sumOfCorners(5) === 101)
+  }
+  
+  test("59th problem: decrypt a message with unknown key"){
+    info("test building combinations")
+    assert(combinations(List(List(1,2,3), List('a', 'b'))) === List(List(1,'a'), List(1,'b'), List(2,'a'), List(2, 'b'), List(3, 'a'), List(3, 'b')))
+    info("split byte array correctly")
+    assert(Euler059.cipherArrays("1,2,3,4,5,6,7,8,9", 3)===Array(Array(1,4,7),Array(2,5,8), Array(3,6,9)))
+    info("decrypt array to \"hello world!\"")
+    assert(Euler059.decrypt("9, 7, 15, 13, 13, 67, 22, 13, 17, 13, 6, 66", 3) === "hello world!".map(c => c.toByte))
   }
 }

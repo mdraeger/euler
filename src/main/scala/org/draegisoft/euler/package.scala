@@ -39,5 +39,17 @@ package object euler {
       println()
     }
   }
+
+  def combinations[T](data: List[List[T]]): List[List[T]] = {
+    def combinations_hlp(result: List[List[T]], data_tmp: List[List[T]]): List[List[T]] ={
+      if (data_tmp.isEmpty)
+        result
+      else {
+        val tmp_result = for (r <- result; d <- data_tmp.head) yield r++List(d)
+        combinations_hlp(tmp_result, data_tmp.tail)
+      }
+    }
+    combinations_hlp (List(List()), data)
+  }
 }
 
