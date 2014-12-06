@@ -134,6 +134,15 @@ module Euler where
             candidates = [(read n)::Integer | l <- [1..9]
                                             , n <- L.permutations (take l "123456789")]
 
+    problem44 = min [pk - pj | pk <- take 2500 $ drop 1000 pentagonals, 
+                               pj <- take 1500 pentagonals,
+                               pj < pk,
+                               p (pk - pj),
+                               p (pk + pj)]
+      where
+         ps = take 2500 pentagonals 
+         p n = n `elem` ps
+
     problem45 = head $ dropWhile (\n -> not.p.fromIntegral $ n) pentagon
         where
             p n = isInteger (t n) && isInteger (h n)
